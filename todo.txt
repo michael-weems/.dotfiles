@@ -1,0 +1,1 @@
+@todo Create script to automatically move this to the correct folder (~/.config/nvim)
