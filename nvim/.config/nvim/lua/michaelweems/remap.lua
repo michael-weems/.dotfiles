@@ -38,8 +38,6 @@ vim.keymap.set("n", "Q", "<nop>")
 
 -- Jump between projects! this is cool
 vim.keymap.set("n", "<C-f>", "<cmd>silent !tmux neww tmux-sessionizer<CR>")
-
--- ? possibly format the document?
 vim.keymap.set("n", "<leader>f", vim.lsp.buf.format)
 
 -- ? what do these do?
