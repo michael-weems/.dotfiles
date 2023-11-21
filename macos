@@ -17,4 +17,6 @@ cat homebrew/casks.txt | xargs brew install --cask
 # Install Chrome Extensions
 sudo ~/.dotfiles/bin/.local/scripts/chrome_extensions_install
 
+tmux
+
 echo "Please manually sign in to the App Store, then run the script mas-install <email> <password>"

@@ -1,4 +1,4 @@
--- Fat cursor in insert mode
+--. Fat cursor in insert mode
 -- vim.opt.guicursor = ""
 
 -- line numbers
