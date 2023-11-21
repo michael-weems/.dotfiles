@@ -14,4 +14,7 @@ STOW_FOLDERS=$STOW_FOLDERS DOTFILES=$DOTFILES $DOTFILES/install
 cat homebrew/apps.txt | xargs brew install
 cat homebrew/casks.txt | xargs brew install --cask
 
-echo "Please manually sign in to the App Store, then run the script ./mas-install <email> <password>"
+# Install Chrome Extensions
+./bin/.local/scripts/chrome_extensions_install
+
+echo "Please manually sign in to the App Store, then run the script mas-install <email> <password>"
