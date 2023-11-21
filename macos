@@ -1,4 +1,9 @@
 #!/usr/bin/env zsh
+
+pushd ~
+rm -rf ~/.dotfiles
+cp -r ~/projects/.dotfiles ~/.dotfiles
+
 if [[ -z $STOW_FOLDERS ]]; then
     STOW_FOLDERS="bin,nvim,tmux,zsh"
 fi
@@ -20,3 +25,5 @@ sudo ~/.dotfiles/bin/.local/scripts/chrome_extensions_install
 tmux
 
 echo "Please manually sign in to the App Store, then run the script mas-install <email> <password>"
+
+popd
