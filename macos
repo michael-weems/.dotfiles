@@ -9,3 +9,15 @@ fi
 
 STOW_FOLDERS=$STOW_FOLDERS DOTFILES=$DOTFILES $DOTFILES/install
 
+# Install all brew apps
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+cat homebrew/apps.txt | xargs brew install
+cat homebrew/casks.txt | xargs brew install --cask
+
+echo "Please manually sign in to the App Store, then run the script ./mas-install <email> <password>"
+if [ $# -eq 2 ]
+then
+    # Install apps from App Store using mas
+    mas signin $1
+    cat mas/install.txt | xargs mas install
+fi

@@ -1,0 +1,6 @@
+stow
+fzf
+neovim
+ripgrep
+tmux
+mas

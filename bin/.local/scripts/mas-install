@@ -1,0 +1,4 @@
+#!/usr/bin/env zsh
+
+# Install apps from App Store using mas
+cat mas/install.txt | xargs mas install
