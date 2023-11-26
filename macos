@@ -1,8 +1,17 @@
 #!/usr/bin/env zsh
 
 pushd ~
+
 rm -rf ~/.dotfiles
 cp -r ~/projects/.dotfiles ~/.dotfiles
+
+# Install all brew apps
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+cat homebrew/apps.txt | xargs brew install
+cat homebrew/casks.txt | xargs brew install --cask
+
+# Install Chrome Extensions
+sudo ~/.dotfiles/bin/.local/scripts/chrome_extensions_install
 
 if [[ -z $STOW_FOLDERS ]]; then
     STOW_FOLDERS="bin,nvim,tmux,zsh"
@@ -13,14 +22,6 @@ if [[ -z $DOTFILES ]]; then
 fi
 
 STOW_FOLDERS=$STOW_FOLDERS DOTFILES=$DOTFILES $DOTFILES/install
-
-# Install all brew apps
-/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
-cat homebrew/apps.txt | xargs brew install
-cat homebrew/casks.txt | xargs brew install --cask
-
-# Install Chrome Extensions
-sudo ~/.dotfiles/bin/.local/scripts/chrome_extensions_install
 
 tmux
 

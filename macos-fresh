@@ -1,0 +1,24 @@
+#!/usr/bin/env zsh
+
+# Run this from a clean OS install of MacOS via curl command
+# curl -s <em>https://github.com/michael-weems/.dotfiles/blob/master/macos-fresh</em> | zsh
+
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+brew install git
+
+pushd ~
+
+mkdir -p ~/projects
+
+cd ~/projects
+git clone https://github.com/michael-weems/.dotfiles.git
+
+cd ~/projects/.dotfiles
+chmod +x macos
+chmod +x macos-fresh
+chmod +x clean-env
+chmod +x install
+./macos
+
+popd
+
