@@ -1,0 +1,22 @@
+#!/usr/bin/env zsh
+
+pushd ~
+
+rm -rf ~/.dotfiles
+cp -r ~/projects/.dotfiles ~/.dotfiles
+
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+
+if [[ -z $STOW_FOLDERS ]]; then
+    STOW_FOLDERS="bin,nvim,tmux,zsh"
+fi
+
+if [[ -z $DOTFILES ]]; then
+    DOTFILES=$HOME/.dotfiles
+fi
+
+STOW_FOLDERS=$STOW_FOLDERS DOTFILES=$DOTFILES $DOTFILES/install
+
+tmux
+
+popd
