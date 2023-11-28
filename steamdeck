@@ -1,10 +1,17 @@
 #!/usr/bin/env zsh
 
-pushd ~ 
+pushd ~
 
 sudo rm -rf ~/.dotfiles
 sudo cp -r /home/deck/projects/.dotfiles ~/.dotfiles
 
+# Install c-lang
+wget https://apt.llvm.org/llvm.sh
+sudo chmod u+x llvm.sh
+sudo ./llvm.sh 17
+clang-xx --version
+
+# Install zsh
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 
 cat ~/.dotfiles/install-lists/unix-utilities.txt | sudo xargs apt-get install -y
