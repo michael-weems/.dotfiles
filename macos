@@ -7,8 +7,9 @@ cp -r ~/projects/.dotfiles ~/.dotfiles
 
 # Install all brew apps
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
-cat homebrew/apps.txt | xargs brew install
-cat homebrew/casks.txt | xargs brew install --cask
+cat install-lists/unix-utilities.txt | xargs brew install
+cat install-lists/macos-utilities.txt | xargs brew install
+cat install-lists/homebrew-casks.txt | xargs brew install --cask
 
 # Install Chrome Extensions
 sudo ~/.dotfiles/bin/.local/scripts/chrome_extensions_install

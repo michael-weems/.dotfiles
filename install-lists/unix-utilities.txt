@@ -3,4 +3,3 @@ fzf
 neovim
 ripgrep
 tmux
-mas
