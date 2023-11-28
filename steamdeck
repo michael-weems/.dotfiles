@@ -10,7 +10,7 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/too
 cat ~/.dotfiles/install-lists/unix-utilities.txt | sudo xargs apt-get install -y
 
 # TODO: curl neovim v0.9.4, untar it, and add it to the path
-
+# TODO: https://github.com/neovim/neovim/releases
 if [[ -z $STOW_FOLDERS ]]; then
     STOW_FOLDERS="bin,nvim,tmux,zsh"
 fi
