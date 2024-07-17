@@ -1,0 +1,31 @@
+- [x] setup i3
+- [ ] watch the i3 videos
+	- [ ] 1. setup
+	- [ ] 2. config
+	- [ ] 3. ricing
+- [ ] capture everything needed for i3 in .dotfiles
+- [ ] take notes on i3 commands
+- [ ] setup alacritty
+	- [ ] transparency with pigom?
+	- [ ] wallpaper with nitrogen
+- [ ] capture everything needed for alacritty in .dotfiles
+	- [ ] transparency with pigom?
+	- [ ] wallpaper with nitrogen
+- [x] setup nerd font
+- [ ] capture everything needed for nerd-font in .dotfiles
+- [x] setup neovim
+- [ ] setup neovim configuration the way I like it
+	- [ ] fix which-key v3 breaking changes
+	- [x] add oil plugin
+	- [ ] look into zettlekasten? notetaking system in nvim
+	- [ ] remap vim to nvim in .bashrc
+- [ ] capture everything needed for neovim in .dotfiles
+- [ ] setup tmux
+- [ ] capture everything needed for tmux in .dotfiles
+- [ ] setup tmux-sessionizer like script
+- [ ] setup polybar
+- [ ] capture everything needed for polybar in .dotfiles
+- [ ] setup .dotfiles repo properly
+	- [ ] setup .bash_aliases file
+	- [ ] setup .bashrc file
+- [ ] ?? start C course?

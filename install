@@ -1,9 +1,14 @@
-#!/usr/bin/env zsh
+#!/bin/bash
+
 pushd $DOTFILES
-for folder in $(echo $STOW_FOLDERS | sed "s/,/ /g")
-do
+
+## NOTE iterate through sed output
+## https://stackoverflow.com/a/49044136
+while read -r line; do
     echo "stow $folder"
     stow -D $folder
     stow $folder
-done
+done < <(echo $STOW_FOLDERS | sed "s/,/ /g")
+
 popd
+

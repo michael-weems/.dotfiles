@@ -1,10 +1,12 @@
-#!/usr/bin/env zsh
-# I am using zsh instead of bash.  I was having some troubles using bash with
-# arrays.  Didn't want to investigate, so I just did zsh
+#!/bin/bash
+
 pushd $DOTFILES
-for folder in $(echo $STOW_FOLDERS | sed "s/,/ /g")
-do
+
+## NOTE iterate through sed output
+## https://stackoverflow.com/a/49044136
+while read -r line; do
     echo "Removing $folder"
     stow -D $folder
-done
+done < <(echo $STOW_FOLDERS | sed "s/,/ /g")
+
 popd

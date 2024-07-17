@@ -1,6 +1,0 @@
-google-chrome
-protonvpn
-discord
-spotify
-iterm2
-steam
