@@ -10,6 +10,7 @@ picom
 pulseaudio-utils
 pulseaudio
 ripgrep
+stow
 tmux
 unzip
 xclip
