@@ -1,10 +1,19 @@
 #!/usr/bin/bash
+
+reinstall="$1"
+
+if [[ ! -z reinstall ]]; then
+	# not using dpkg (which is recommended for scripting) instead of apt 
+	# since dpkg doesn't seem to also get dependencies 
+	cat .apt-install-list | tr '\n' ' ' | xargs apt install -y	
+fi
+
 if [[ -z $STOW_FOLDERS ]]; then
-    STOW_FOLDERS="bin,i3,nvim,tmux,bash"
+    STOW_FOLDERS="alacritty,bash,bin,i3,nvim,tmux"
 fi
 
 if [[ -z $DOTFILES ]]; then
     DOTFILES=$HOME/.dotfiles
 fi
 
-STOW_FOLDERS=$STOW_FOLDERS DOTFILES=$DOTFILES $DOTFILES/install
+STOW_FOLDERS=$STOW_FOLDERS DOTFILES=$DOTFILES $DOTFILES/stow-folders
