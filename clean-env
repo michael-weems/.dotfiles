@@ -4,9 +4,10 @@ pushd $DOTFILES
 
 ## NOTE iterate through sed output
 ## https://stackoverflow.com/a/49044136
-while read -r line; do
-    echo "Removing $folder"
-    stow -D $folder
-done < <(echo $STOW_FOLDERS | sed "s/,/ /g")
+while IFS="" read -r p || [ -n "$p" ]
+do
+    echo "Removing $p"
+    stow -D $p
+done < $DOTFILES/.stow-folders
 
 popd

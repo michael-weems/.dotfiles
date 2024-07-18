@@ -1,14 +1,15 @@
 #!/bin/bash
 
+rm -rf ~/.dotfiles
+
 SCRIPT_DIR=$( cd -- "$( dirname -- "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )
 echo "copying $SCRIPT_DIR into ~/.dotfiles..."
 
-mkdir ~/.dotfiles
-cp "$SCRIPT_DIR" ~/.dotfiles
+cp -r "$SCRIPT_DIR" ~/.dotfiles
 echo "done copying $SCRIPT_DIR into ~/.dotfiles"
 
-pushd ~/.dotfiles
-
-./ubuntu reinstall
+~/.dotfiles/ubuntu reinstall
 
 pushd ~
+echo "your workspace is ready to go"
+

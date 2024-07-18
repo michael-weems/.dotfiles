@@ -2,13 +2,12 @@
 
 pushd $DOTFILES
 
-## NOTE iterate through sed output
-## https://stackoverflow.com/a/49044136
-while read -r line; do
-    echo "stow $folder"
-    stow -D $folder
-    stow $folder
-done < <(echo $STOW_FOLDERS | sed "s/,/ /g")
+while IFS="" read -r p || [ -n "$p" ]
+do
+    echo "stow $p"
+    stow -D $p
+    stow $p
+done < $DOTFILES/.stow-folders
 
 popd
 

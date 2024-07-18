@@ -2,16 +2,12 @@
 
 reinstall="$1"
 
-if [[ ! -z reinstall ]]; then
-	sudo ./install
-fi
-
-if [[ -z $STOW_FOLDERS ]]; then
-    STOW_FOLDERS="alacritty,bash,bin,i3,nvim,tmux"
-fi
-
 if [[ -z $DOTFILES ]]; then
     DOTFILES=$HOME/.dotfiles
 fi
 
-STOW_FOLDERS=$STOW_FOLDERS DOTFILES=$DOTFILES $DOTFILES/stow-folders
+if [[ ! -z reinstall ]]; then
+	sudo DOTFILES=$DOTFILES $DOTFILES/install
+fi
+
+DOTFILES=$DOTFILES $DOTFILES/stow-folders
