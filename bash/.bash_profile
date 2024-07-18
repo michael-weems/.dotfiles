@@ -13,4 +13,4 @@ PATH=".local/bin:$PATH"
 PATH=".local/scripts:$PATH"
 
 # Where should I put you?
-bindkey -s ^f "tmux-sessionizer\n"
+bind '"\C-f": "tmux-sessionizer\n"'
