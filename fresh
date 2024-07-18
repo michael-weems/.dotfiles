@@ -6,3 +6,9 @@ echo "copying $SCRIPT_DIR into ~/.dotfiles..."
 mkdir ~/.dotfiles
 cp "$SCRIPT_DIR" ~/.dotfiles
 echo "done copying $SCRIPT_DIR into ~/.dotfiles"
+
+pushd ~/.dotfiles
+
+./ubuntu reinstall
+
+pushd ~
