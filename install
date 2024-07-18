@@ -1,0 +1,6 @@
+#!/bin/bash
+
+# not using dpkg (which is recommended for scripting) instead of apt 
+# since dpkg doesn't seem to also get dependencies 
+
+cat .apt-install-list | tr '\n' ' ' | xargs apt install -y	

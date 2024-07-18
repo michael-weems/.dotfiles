@@ -3,9 +3,7 @@
 reinstall="$1"
 
 if [[ ! -z reinstall ]]; then
-	# not using dpkg (which is recommended for scripting) instead of apt 
-	# since dpkg doesn't seem to also get dependencies 
-	cat .apt-install-list | tr '\n' ' ' | xargs apt install -y	
+	sudo ./install
 fi
 
 if [[ -z $STOW_FOLDERS ]]; then
