@@ -5,9 +5,9 @@
 	- [ ] 3. ricing
 - [ ] capture everything needed for i3 in .dotfiles
 - [ ] take notes on i3 commands
-- [ ] setup alacritty
-	- [ ] transparency with pigom?
-	- [ ] wallpaper with nitrogen
+- [x] setup alacritty
+	- [x] transparency with pigom?
+	- [x] wallpaper with nitrogen
 - [ ] capture everything needed for alacritty in .dotfiles
 	- [ ] transparency with pigom?
 	- [ ] wallpaper with nitrogen
