@@ -1,0 +1,30 @@
+#!/bin/bash
+
+setup="$1"
+
+usage() {
+	echo "Error: Please provide a desktop-configuration argument"	
+	echo "\tAccepted Arguments: docked,undocked"
+	echo ""
+}
+
+if [ -z "$setup" ]; then
+	usage
+	exit -1
+fi
+
+if [ "$setup" == "docked" ]; then
+	xrandr --output HDMI-A-0 --auto
+	xrandr --output dDP --off
+	exit 0
+fi
+
+if [ "$setup" == "undocked" ]; then
+	xrandr --output eDP --auto
+	xrandr --output HDMI-A-0 --off
+	exit 0
+fi
+
+usage
+exit -1
+

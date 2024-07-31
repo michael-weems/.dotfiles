@@ -15,4 +15,5 @@ ripgrep
 stow
 tmux
 unzip
+valgrind
 xclip

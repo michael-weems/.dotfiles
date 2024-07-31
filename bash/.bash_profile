@@ -8,9 +8,17 @@ export GIT_EDITOR=$VIM
 #export CXX="clang++-12"
 #export GOPATH=$HOME/go
 
+# Where should I put you?
+bind '"\C-f": "tmux-sessionizer\n"'
+
+if [ -f ~/.bashrc ];
+then 
+    .  ~/.bashrc; 
+fi 
+
+PATH=$PATH:$HOME/bin 
 PATH=$DOTFILES:$PATH
 PATH=".local/bin:$PATH"
 PATH=".local/scripts:$PATH"
+export PATH
 
-# Where should I put you?
-bind '"\C-f": "tmux-sessionizer\n"'
