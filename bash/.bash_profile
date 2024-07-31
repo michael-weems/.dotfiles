@@ -18,7 +18,7 @@ fi
 
 PATH=$PATH:$HOME/bin 
 PATH=$DOTFILES:$PATH
-PATH=".local/bin:$PATH"
-PATH=".local/scripts:$PATH"
+PATH="$HOME/.local/bin:$PATH"
+PATH="$HOME/.local/scripts:$PATH"
 export PATH
 
