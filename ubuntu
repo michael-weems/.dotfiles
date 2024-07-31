@@ -11,3 +11,7 @@ if [[ ! -z reinstall ]]; then
 fi
 
 DOTFILES=$DOTFILES $DOTFILES/stow-folders
+
+source $HOME/.bash_profile
+source $HOME/.bashrc
+

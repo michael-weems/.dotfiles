@@ -15,7 +15,7 @@ fi
 
 if [ "$setup" == "docked" ]; then
 	xrandr --output HDMI-A-0 --auto
-	xrandr --output dDP --off
+	xrandr --output eDP --off
 	exit 0
 fi
 
